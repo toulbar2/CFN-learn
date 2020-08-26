@@ -1,0 +1,3 @@
+[submodule "tb2-submodule"]
+	path = tb2-submodule
+	url = https://github.com/toulbar2/toulbar2.git
