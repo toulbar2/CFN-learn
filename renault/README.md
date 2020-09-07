@@ -32,7 +32,7 @@ The parameters are:
 
 ## Experiments
 
-Count the number of solutions on medium car configuration system [[Favier et al, CP2009]](http://miat.inrae.fr/degivry/Favier09a.pdf):
+Count the number of solutions on medium car configuration system by exploiting tree decomposition [[Favier et al, CP2009]](http://miat.inrae.fr/degivry/Favier09a.pdf):
 
 ```
 toulbar2 renault/medium_domainsorted.xml -ub=1 -a -O=-3 -B=1 -hbfs: -nopre
@@ -106,7 +106,7 @@ done
 
 ![Fig.2a [Brouard et al, CP2020]](http://genoweb.toulouse.inra.fr/~degivry/evalgm/medium.png)
 
-Count the number of solutions on big car configuration system [[Favier et al, CP2009]](http://miat.inrae.fr/degivry/Favier09a.pdf):
+Count the number of solutions on big car configuration system:
 
 ```
 toulbar2 renault/big_domainsorted.xml -ub=1 -a -O=-3 -B=1 -hbfs: -nopre
@@ -129,13 +129,13 @@ Time                   :    1.571 seconds
 ... in 45399 backtracks and 90798 nodes
 ```
 
-Learn the user preferences using L1 norm with preselected lambda found by the StARS algorithm [[Liu et al, NIPS 2010]](http://papers.nips.cc/paper/3966-stability-approach-to-regularization-selection-stars-for-high-dimensional-graphical-models) and combine them to mandatory constraints in order to simulate an on-line car configuration prediction tool, using the last test fold of a 10-fold cross validation protocol:
+Learn the user preferences using L1 norm with preselected lambda and combine them to mandatory constraints in order to simulate an on-line car configuration prediction tool, using the last test fold of a 10-fold cross validation protocol:
 
 ```
 python3 renault.py 0 0.231 9 big 1 2 1 1 1
 ```
 
-*partial output (in less than 8 minutes):*
+*partial output (took less than 8 minutes):*
 
 ```
 Number of training samples: 7493
