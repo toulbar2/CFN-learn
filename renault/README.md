@@ -12,7 +12,7 @@ The python3-sklearn (scikit python3) must be installed.
 * **Indices of the 10-fold cross-validation for each sale history**: index_csv_medium.txt / index_csv_big.txt (duplicated configurations are kept in the same fold)
 
 ## Lambda parameters
-The lambda parameter selected using the StARS algorithm for the different folds of the cross-validation are given in the corresponding files:
+The lambda parameter selected using the Stability Approach to Regularization Selection (StARS) algorithm [[Liu et al, NIPS 2010]](http://papers.nips.cc/paper/3966-stability-approach-to-regularization-selection-stars-for-high-dimensional-graphical-models) for the different folds of the cross-validation are given in the corresponding files:
 * lambda_medium_l1.txt
 * lambda_medium_l1_l2.txt
 * lambda_big_l1.txt
@@ -29,7 +29,7 @@ The parameters are:
 7. combining learned preferences with known constraints [0|1]
 8. comparison with predictions from an oracle method knowing the test set [0|1]
 9. initial seed for random generator
-10. find lambda value automatically using the StARS (Stability Approach to Regularization Selection) algorithm [0|1]
+10. find lambda value automatically using the StARS algorithm [0|1]
 
 ## Experiments
 
@@ -56,7 +56,7 @@ Time                   :    0.093 seconds
 ... in 2169 backtracks and 4338 nodes
 ```
 
-Learn the user preferences using L1 norm with preselected lambda found by the StARS algorithm [[Liu et al, NIPS 2010]](http://papers.nips.cc/paper/3966-stability-approach-to-regularization-selection-stars-for-high-dimensional-graphical-models) and combine them to mandatory constraints in order to simulate an on-line car configuration prediction tool, using the last test fold of a 10-fold cross validation protocol:
+Learn the user preferences using L1 norm with preselected lambda found by the StARS algorithm and combine them to mandatory constraints in order to simulate an on-line car configuration prediction tool, using the last test fold of a 10-fold cross validation protocol:
 
 ```
 python3 renault.py 0 29.151 9 medium 1 2 1 1 1
