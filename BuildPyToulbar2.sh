@@ -9,4 +9,4 @@ cmake -DPYTB2=ON -DXML=ON ..
 make -j $(python3 -c 'import multiprocessing as m; print(m.cpu_count())')
 cd ../..
 ln -s tb2-submodule/build/lib/*/pytoulbar2.*
-
+ln -s tb2-submodule/build/bin/*/toulbar2
