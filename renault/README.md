@@ -91,3 +91,5 @@ do
     done
 done
 ```
+
+![medium.png](http://genoweb.toulouse.inra.fr/~degivry/evalgm/medium.png)
