@@ -92,4 +92,50 @@ do
 done
 ```
 
-![big.png](http://genoweb.toulouse.inra.fr/~degivry/evalgm/big.png)
+![Fig.2a [Brouard et al, CP2020]](http://genoweb.toulouse.inra.fr/~degivry/evalgm/medium.png)
+
+Count the number of solutions on big car configuration system [[Favier et al, CP2009]](http://miat.inrae.fr/degivry/Favier09a.pdf):
+
+```
+toulbar2 renault/big_domainsorted.xml -ub=1 -a -O=-3 -B=1 -hbfs: -nopre
+```
+
+*partial output:*
+
+```
+268 unassigned variables, 1273 values in all current domains (med. size:2, max size:324) and 332 non-unary cost functions (med. arity:2, med. degree:1)
+Initial lower and upper bounds: [0, 1] 100.000%
+Tree decomposition width  : 12
+Tree decomposition height : 41
+Number of clusters        : 214
+Tree decomposition time: 0.012 seconds.
+Number of solutions    : =  24566537954855758069760
+Number of #goods       :    138879
+Number of used #goods  :    374013
+Size of sep            :    10
+Time                   :    1.571 seconds
+... in 45399 backtracks and 90798 nodes
+```
+
+Learn the user preferences using L1 norm with preselected lambda found by the StARS algorithm [[Liu et al, NIPS 2010]](http://papers.nips.cc/paper/3966-stability-approach-to-regularization-selection-stars-for-high-dimensional-graphical-models) and combine them to mandatory constraints in order to simulate an on-line car configuration prediction tool, using the last test fold of a 10-fold cross validation protocol:
+
+```
+python3 renault.py 0 0.231 9 big 1 2 1 1 1
+```
+
+*partial output:*
+
+```
+Number of training samples: 7493
+Number of test samples: 844
+Primal and dual met after 18 iterations
+The CFN has 130 cost functions
+UB before preprocessing: 942.832628
+UB after preprocessing: 70.083989
+UB: -50.769208
+UB: -50.769208
+UB: -50.769208
+...
+```
+
+![Fig.2b [Brouard et al, CP2020]](http://genoweb.toulouse.inra.fr/~degivry/evalgm/big.png)
