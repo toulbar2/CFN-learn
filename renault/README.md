@@ -92,4 +92,4 @@ do
 done
 ```
 
-![medium.png](http://genoweb.toulouse.inra.fr/~degivry/evalgm/medium.png)
+![big.png](http://genoweb.toulouse.inra.fr/~degivry/evalgm/big.png)
