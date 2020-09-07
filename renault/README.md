@@ -24,12 +24,12 @@ The parameters are:
 2. lambda value [0-infty] (unused if last parameter set to 1)
 3. validation fold [0-9]
 4. instance name [medium|big] 
-5. minimum arity of learned cost functions [1|2]
-6. maximum arity of learned cost functions [1|2]
-7. combining learned preferences with known constraints [0|1]
-8. comparison with predictions from an oracle method knowing the test set [0|1]
-9. initial seed for random generator
-10. find lambda value automatically using the StARS algorithm [0|1]
+5. minimum arity of learned cost functions [1|2] (default value is 1)
+6. maximum arity of learned cost functions [1|2] (default value is 2)
+7. combining learned preferences with known constraints [0|1] (default value is 1)
+8. comparison with predictions from an oracle method knowing the test set [0|1] (default value is 0)
+9. initial random seed number [integer] (default value is 1)
+10. find lambda value automatically using the StARS algorithm [0|1] (default value is 0)
 
 ## Experiments
 
@@ -56,10 +56,10 @@ Time                   :    0.093 seconds
 ... in 2169 backtracks and 4338 nodes
 ```
 
-Learn the user preferences using L1 norm with preselected lambda found by the StARS algorithm and combine them to mandatory constraints in order to simulate an on-line car configuration prediction tool, using the last test fold of a 10-fold cross validation protocol:
+Learn the user preferences using L1 norm with pre-recorded lambda found by the StARS algorithm and combine them to mandatory constraints in order to simulate an on-line car configuration prediction tool, using the last test fold of a 10-fold cross validation protocol:
 
 ```
-python3 renault.py 0 29.151 9 medium 1 2 1 1 1
+python3 renault.py 0 29.151 9 medium
 ```
 
 *partial output (took about 2 minutes):*
@@ -89,7 +89,7 @@ hint     precision (%)
 Maximum number of backtracks:  173
 ```
 
-Example for running the code on the medium dataset with an L1 penalty for 10-fold cross validation and 10 repetitions:
+Example for running the code on the medium dataset with an L1 penalty using pre-recorded lambda for 10-fold cross validation and 10 repetitions:
 
 ```
 /bin/bash
@@ -100,7 +100,7 @@ for ((fold=0; fold<10 ; i++))
 do
     for ((j=0; j<10 ; j++))
     do
-	    python3 renault.py 0 ${myArray[$fold]} ${fold} medium 1 2 1 1 ${j}
+	    python3 renault.py 0 ${myArray[$fold]} ${fold} medium 1 2 1 0 ${j}
     done
 done
 ```
@@ -130,10 +130,10 @@ Time                   :    1.571 seconds
 ... in 45399 backtracks and 90798 nodes
 ```
 
-Learn the user preferences using L1 norm with preselected lambda and combine them to mandatory constraints in order to simulate an on-line car configuration prediction tool, using the last test fold of a 10-fold cross validation protocol:
+Learn the user preferences using L1 norm with pre-recorded lambda and combine them to mandatory constraints in order to simulate an on-line car configuration prediction tool, using the last test fold of a 10-fold cross validation protocol:
 
 ```
-python3 renault.py 0 0.231 9 big 1 2 1 1 1
+python3 renault.py 0 0.231 9 big
 ```
 
 *partial output (took less than 8 minutes):*
