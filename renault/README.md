@@ -62,7 +62,7 @@ Learn the user preferences using L1 norm with pre-recorded lambda found by the S
 python3 renault.py 0 29.151 9 medium
 ```
 
-*partial output (took less than 1 minute):*
+*partial output (took less than 1 minute for learning the CFN model and incrementally solving 44x821=36124 instances!):*
 
 ```
 Number of training samples: 7431
@@ -136,7 +136,7 @@ Learn the user preferences using L1 norm with pre-recorded lambda and combine th
 python3 renault.py 0 0.231 9 big
 ```
 
-*partial output (took less than 2 minutes):*
+*partial output (took less than 2 minutes for learning and solving 87x844=73428 instances!):*
 
 ```
 Number of training samples: 7493
