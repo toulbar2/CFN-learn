@@ -77,7 +77,7 @@ UB: -20.17739
 ...
 UB: -5.790902
 UB: -5.790902
-2249 incorrect solutions
+2249 incorrect solutions (6.23%)
 PE-MRF:
 hint     precision (%)
 0 81.85140073081608
@@ -151,7 +151,7 @@ UB: -50.769208
 ...
 UB: -53.011048
 UB: -48.980806
-4012 incorrect solutions
+4012 incorrect solutions (5.46%)
 PE-MRF:
 hint     precision (%)
 0 85.54502369668246
