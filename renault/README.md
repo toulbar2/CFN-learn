@@ -58,7 +58,7 @@ Time                   :    0.093 seconds
 Learn the user preferences using L1 norm with preselected lambda found by the StARS algorithm [[Liu et al, NIPS 2010]](http://papers.nips.cc/paper/3966-stability-approach-to-regularization-selection-stars-for-high-dimensional-graphical-models) and combine them to mandatory constraints in order to simulate an on-line car configuration prediction tool, using the last test fold of a 10-fold cross validation protocol:
 
 ```
-python3 renault.py 0 35.112 9 medium 1 2 1 1 1
+python3 renault.py 0 29.151 9 medium 1 2 1 1 1
 ```
 
 *partial output:*
