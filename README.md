@@ -49,3 +49,9 @@ requirements on https://github.com/toulbar2/toulbar2, install
 them. Under Linux, executing the `BuildPyToulbar2.sh` script should
 finish the job.
 
+```
+git clone https://github.com/toulbar2/CFN-learn.git
+cd CFN-learn
+./BuildPyToulbar2.sh
+```
+
