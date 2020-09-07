@@ -12,7 +12,7 @@ class CFN:
         if configuration:
             tb2.option.elimDegree_preprocessing = 1
             tb2.option.solutionBasedPhaseSaving = False     # WARNING! False: do not reuse previous complete solutions as hints during incremental solving used by structure learning evaluation procedure!
-
+        self.configuration = configuration
         tb2.option.decimalPoint = 6
         if twoSolutions:
             tb2.option.allSolutions = 2     # find two solutions and quit (incompatible with incremental solving)
@@ -82,7 +82,7 @@ class CFN:
         self.CFN.read(problem)
 
     def Parse(self, certificate):
-        self.CFN.parse_solution(certificate, False)    # important! False: do not reuse certificate in future searches used by structure learning evaluation procedure!
+        self.CFN.parse_solution(certificate, False if self.configuration else True)    # WARNING! False: do not reuse certificate in future searches used by structure learning evaluation procedure!
 
     def Domain(self, varIndex):
         return self.CFN.wcsp.getEnumDomain(varIndex)
