@@ -20,15 +20,16 @@ The lambda parameter selected using the StARS algorithm for the different folds 
 
 ## Main script ../renault.py
 The parameters are:
-* penalty norm [0-2] (L1/L2/L1_L2 norms)
-* lambda value [0-infty] (unused if last parameter set to 1)
-* validation fold [0-9]
-* instance name [medium|big] 
-* minimum arity of learned cost functions [1|2]
-* maximum arity of learned cost functions [1|2]
-* combining learned preferences with known constraints [0|1]
-* comparison with predictions from an oracle method knowing the test set [0|1]
-* find lambda value automatically using the StARS (Stability Approach to Regularization Selection) algorithm [0|1]
+1. penalty norm [0-2] (L1/L2/L1_L2 norms)
+2. lambda value [0-infty] (unused if last parameter set to 1)
+3. validation fold [0-9]
+4. instance name [medium|big] 
+5. minimum arity of learned cost functions [1|2]
+6. maximum arity of learned cost functions [1|2]
+7. combining learned preferences with known constraints [0|1]
+8. comparison with predictions from an oracle method knowing the test set [0|1]
+9. initial seed for random generator
+10. find lambda value automatically using the StARS (Stability Approach to Regularization Selection) algorithm [0|1]
 
 ## Experiments
 
