@@ -33,7 +33,7 @@ The parameters are:
 
 ## Experiments
 
-Count the number of solutions on medium car configuration system by exploiting tree decomposition [[Favier et al, CP2009]](http://miat.inrae.fr/degivry/Favier09a.pdf):
+Count the number of solutions on a `medium` car product description by exploiting tree decomposition [[Favier et al, CP2009]](http://miat.inrae.fr/degivry/Favier09a.pdf):
 
 ```
 toulbar2 renault/medium_domainsorted.xml -ub=1 -a -O=-3 -B=1 -hbfs: -nopre
@@ -56,7 +56,7 @@ Time                   :    0.093 seconds
 ... in 2169 backtracks and 4338 nodes
 ```
 
-Learn the user preferences using L1 norm with pre-recorded lambda found by the StARS algorithm and combine them to mandatory constraints in order to simulate an on-line car configuration prediction tool, using the last test fold of a 10-fold cross validation protocol:
+Learn the user preferences using L1 norm with pre-recorded lambda found by the StARS algorithm and combine them to the previous car product description in order to simulate an on-line car configuration prediction tool, using the last test fold of a 10-fold cross validation protocol:
 
 ```
 python3 renault.py 0 29.151 9 medium
@@ -89,7 +89,7 @@ hint     precision (%)
 Maximum number of backtracks:  173
 ```
 
-Example for running the code on the medium dataset with an L1 penalty using pre-recorded lambda for 10-fold cross validation and 10 repetitions:
+Example for running the code on the `medium` dataset with an L1 penalty using pre-recorded lambda for 10-fold cross validation and 10 repetitions:
 
 ```
 /bin/bash
@@ -107,7 +107,7 @@ done
 
 ![Fig.2a [Brouard et al, CP2020]](http://genoweb.toulouse.inra.fr/~degivry/evalgm/medium.png)
 
-Count the number of solutions on big car configuration system:
+Count the number of solutions on a `big` car product description:
 
 ```
 toulbar2 renault/big_domainsorted.xml -ub=1 -a -O=-3 -B=1 -hbfs: -nopre
@@ -130,7 +130,7 @@ Time                   :    1.571 seconds
 ... in 45399 backtracks and 90798 nodes
 ```
 
-Learn the user preferences using L1 norm with pre-recorded lambda and combine them to mandatory constraints in order to simulate an on-line car configuration prediction tool, using the last test fold of a 10-fold cross validation protocol:
+Learn the user preferences using L1 norm with pre-recorded lambda and combine them to the previous car product description in order to simulate an on-line car configuration prediction tool, using the last test fold of a 10-fold cross validation protocol:
 
 ```
 python3 renault.py 0 0.231 9 big
