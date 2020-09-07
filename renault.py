@@ -34,6 +34,8 @@ else:
 if len(sys.argv) > 9:
     rndseed = int(sys.argv[9])
     np.random.seed(rndseed)
+else:
+    np.random.seed(1)
 
 if len(sys.argv) > 10:
     select_lambda = bool(int(sys.argv[10]))
