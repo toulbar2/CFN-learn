@@ -3,7 +3,7 @@
 
 ## Prerequisites
 
-The python3-sklearn (scikit python3) must be installed. 
+The python3-sklearn (scikit python3) must be installed. You need also pandas, numpy, colorama, gzip, lzma, pickle, and simplejson modules installed for Python3.
 
 ## Data files
 * **1-year sales history of satisfiable car configurations**: config_medium_filtered.txt (8253) / config_big_filtered.txt (8338) (car configurations incompatible with the constraints have been removed and repeated configurations have been duplicated)
