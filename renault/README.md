@@ -10,7 +10,8 @@ The python3-sklearn (scikit python3) must be installed. You need also pandas, nu
 * **Domains**: domain_medium.pkl / domain_big.pkl (pickle ordered domain dictionary data structures)
 * **Constraints**: medium_domainsorted.xml / big_domainsorted.xml (domain values have been sorted in increasing order compared to the original files)
 * **Indices of the 10-fold cross-validation for each sale history**: index_csv_medium.txt / index_csv_big.txt (duplicated configurations are kept in the same fold)
-Initial datasets come from [here](https://www.irit.fr/~Helene.Fargier/BR4CP/benches.html).
+
+Original datasets come from [here](https://www.irit.fr/~Helene.Fargier/BR4CP/benches.html).
 
 ## Lambda parameters
 The lambda parameter selected using the Stability Approach to Regularization Selection (StARS) algorithm [[Liu et al, NIPS 2010]](http://papers.nips.cc/paper/3966-stability-approach-to-regularization-selection-stars-for-high-dimensional-graphical-models) for the different folds of the cross-validation are given in the corresponding files:
