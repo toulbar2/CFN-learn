@@ -32,10 +32,48 @@ The parameters are:
 
 ## Experiments
 
-A simple example using L1 penalty with preselected lambda on the last 10-fold test set for the medium instance
+Count the number of solutions on medium car configuration system [[Favier et al, CP2009]](http://miat.inrae.fr/degivry/Favier09a.pdf):
+
+```
+toulbar2 renault/medium_domainsorted.xml -ub=1 -a -O=-3 -B=1 -hbfs: -nopre
+```
+
+*partial output:*
+
+```
+148 unassigned variables, 426 values in all current domains (med. size:2, max size:20) and 173 non-unary cost functions (med. arity:2, med. degree:1)
+Initial lower and upper bounds: [0, 1] 100.000%
+Tree decomposition width  : 10
+Tree decomposition height : 27
+Number of clusters        : 112
+Tree decomposition time: 0.007 seconds.
+Number of solutions    : =  278744
+Number of #goods       :    4126
+Number of used #goods  :    3475
+Size of sep            :    7
+Time                   :    0.093 seconds
+... in 2169 backtracks and 4338 nodes
+```
+
+Learn the user preferences using L1 norm with preselected lambda found by the StARS algorithm [[Liu et al, NIPS 2010]](http://papers.nips.cc/paper/3966-stability-approach-to-regularization-selection-stars-for-high-dimensional-graphical-models) and combine them to mandatory constraints in order to simulate an on-line car configuration prediction tool, using the last test fold of a 10-fold cross validation protocol:
 
 ```
 python3 renault.py 0 35.112 9 medium 1 2 1 1 1
+```
+
+*partial output:*
+
+```
+Number of training samples: 7431
+Number of test samples: 821
+Primal and dual met after 314 iterations
+The CFN has 324 cost functions
+UB before preprocessing: 974.410922
+UB after preprocessing: 37.393479
+UB: -18.66815
+UB: -18.66815
+UB: -20.327802
+...
 ```
 
 Example for running the code on the medium dataset with an L1 penalty for 10-fold cross validation and 10 repetitions:
