@@ -17,8 +17,7 @@ In the top directory, we provide the following main files:
 * `PEMRF.py`: is a Python implementation of PE_MRF, the ADMM-based
   Graphical Model regularized maximum log-likelihood parameters and
   structure estimation algorithm for pairwise Graphical Models
-  originally described in [this
-  paper](https://stanford.edu/~boyd/papers/pdf/pairwise_exp_struct.pdf)
+  originally described in [[Park et al, MLR 2017]](https://stanford.edu/~boyd/papers/pdf/pairwise_exp_struct.pdf)
   with L1 (Lasso), L1/L2 (Group Lasso) and L2 (Ridge) regularizations.
 
 * `Sudoku-train-and-test.py`: trains a Sudoku solver and tests its
