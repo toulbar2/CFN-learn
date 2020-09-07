@@ -61,19 +61,31 @@ Learn the user preferences using L1 norm with preselected lambda found by the St
 python3 renault.py 0 29.151 9 medium 1 2 1 1 1
 ```
 
-*partial output:*
+*partial output (took about 2 minutes):*
 
 ```
 Number of training samples: 7431
 Number of test samples: 821
-Primal and dual met after 314 iterations
-The CFN has 324 cost functions
-UB before preprocessing: 974.410922
-UB after preprocessing: 37.393479
-UB: -18.66815
-UB: -18.66815
-UB: -20.327802
+Primal and dual met after 294 iterations
+The CFN has 348 cost functions
+UB before preprocessing: 974.279681
+UB after preprocessing: 37.660892
+UB: -18.559461
+UB: -18.559461
+UB: -20.17739
 ...
+UB: -5.790902
+UB: -5.790902
+2249 incorrect solutions
+PE-MRF:
+hint     precision (%)
+0 81.85140073081608
+1 84.28745432399512
+2 85.3836784409257
+...
+42 97.07673568818514
+43 96.58952496954933
+Maximum number of backtracks:  173
 ```
 
 Example for running the code on the medium dataset with an L1 penalty for 10-fold cross validation and 10 repetitions:
@@ -123,7 +135,7 @@ Learn the user preferences using L1 norm with preselected lambda found by the St
 python3 renault.py 0 0.231 9 big 1 2 1 1 1
 ```
 
-*partial output:*
+*partial output (in less than 8 minutes):*
 
 ```
 Number of training samples: 7493
@@ -136,6 +148,19 @@ UB: -50.769208
 UB: -50.769208
 UB: -50.769208
 ...
+UB: -53.011048
+UB: -48.980806
+4012 incorrect solutions
+PE-MRF:
+hint     precision (%)
+0 85.54502369668246
+1 88.74407582938389
+2 88.27014218009478
+3 89.92890995260663
+...
+85 96.2085308056872
+86 97.03791469194313
+Maximum number of backtracks:  83
 ```
 
 ![Fig.2b [Brouard et al, CP2020]](http://genoweb.toulouse.inra.fr/~degivry/evalgm/big.png)
